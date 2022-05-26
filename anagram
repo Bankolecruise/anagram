@@ -1,0 +1,19 @@
+def find_anagram():
+    firstword = input("Enter your first word here:>>")
+    secondword = input("Enter your second word here:>>")
+    if firstword.isalpha() and secondword.isalpha():
+        #fw stands for firstword and sw stands for secondword
+        fw= firstword.lower()
+        sw= secondword.lower()
+        fw_chars=sorted(fw)
+        sw_chars=sorted(sw)
+        if fw_chars == sw_chars:
+            if len(fw_chars)== len(sw_chars):
+                return True
+        else:
+            return False
+    else:
+        return "Entry not Valid"
+    
+
+print(find_anagram())
